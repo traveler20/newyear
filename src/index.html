@@ -47,9 +47,9 @@
 			<!-- .p-fv -->
 			<section class="p-fv">
 				<div class="c-section__inner">
-					<p class="p-fv__lead">2022年</p>
-					<h1 class="p-fv__title">謹賀新年</h1>
-					<p class="p-fv__english">Happy New Year.</p>
+					<p class="p-fv__lead js-fv__sub">2022年</p>
+					<h1 class="p-fv__title js-fv__title">謹賀新年</h1>
+					<p class="p-fv__english js-fv__sub">Happy New Year.</p>
 				</div>
 			</section>
 			<!-- /.p-fv -->
@@ -225,6 +225,10 @@
 							<div class="c-form__submit">
 								<button type="submit">送信する</button>
 							</div>
+
+							<p id="js-formThanks" class="c-formThanks">
+								お問い合わせありがとうございます。
+							</p>
 						</form>
 						<script type="text/javascript">
 							let submitted = false;
@@ -233,7 +237,7 @@
 							name="hidden_iframe"
 							id="hidden_iframe"
 							style="display: none"
-							onload="if(submitted){window.location='html-googleforms-thanks.html';}"
+							onload="if(submitted){document.getElementById('js-formThanks').classList.add('is-received');}"
 						></iframe>
 					</header>
 					<div class="c-buttonBlock">
