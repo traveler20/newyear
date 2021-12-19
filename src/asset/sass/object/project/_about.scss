@@ -1,0 +1,27 @@
+/* p-about
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-about {
+	&__description {
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		letter-spacing: 3px;
+
+		margin: 0 24px 0 0;
+	}
+	&__image {
+		aspect-ratio: 2/3;
+		object-fit: cover;
+		margin: 0 24px 0 0;
+	}
+
+	@include s.breakpoint(tablet) {
+		&__image {
+			width: 70%;
+			aspect-ratio: 3/2;
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}

@@ -1,0 +1,45 @@
+/* system
+--------------------------- */
+
+// color system
+// ---------------------
+$c-base: #efefef;
+$c-base-sub: #fff; // section
+$c-body: #333;
+$c-accent: #ca6060;
+
+$transition-base: all 0.4s;
+
+// font system
+// ---------------------
+@import url("https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap");
+@mixin yujimai($weight: bold) {
+	font-family: "Yuji Mai", "Cormorant Garamond", serif;
+	font-weight: $weight;
+}
+
+// responsive system
+// ---------------------
+@mixin breakpoint($point) {
+	@if $point == tablet {
+		@media (min-width: 640px) {
+			@content;
+		}
+	}
+	@if $point == pc {
+		@media (min-width: 890px) {
+			@content;
+		}
+	}
+}
+
+.pc-only {
+	display: none;
+}
+@include breakpoint(tablet) {
+}
+@include breakpoint(pc) {
+	.pc-only {
+		display: inline-block;
+	}
+}

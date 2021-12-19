@@ -1,0 +1,38 @@
+/* p-blog
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-blog {
+	// c-section__header
+	.c-section__header {
+		flex-direction: row-reverse;
+	}
+
+	&__title {
+		position: sticky;
+		top: 20px;
+
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	&__gallery {
+		width: 75%;
+		margin: 0;
+		img + img {
+			margin: 20px 0 0;
+		}
+	}
+
+	@include s.breakpoint(tablet) {
+		&__gallery {
+			width: 50%;
+			margin: 0 24px 0 0;
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}

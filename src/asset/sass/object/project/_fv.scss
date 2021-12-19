@@ -1,0 +1,53 @@
+/* p-fv
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-fv {
+	color: s.$c-base-sub;
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	background-image: url(./../img/fv-bg.jpg);
+	background-size: cover;
+	background-position: center;
+
+	position: relative;
+	z-index: 0;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: -5px;
+		right: -5px;
+		background-color: rgba($color: s.$c-body, $alpha: 0.5);
+	}
+
+	&__lead {
+		font-size: 1.8rem;
+	}
+	&__title {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		font-size: 7.2rem;
+		font-weight: bold;
+		@include s.yujimai(bold);
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		letter-spacing: 4px;
+		margin: 24px 0;
+	}
+	&__english {
+		font-size: 1.4rem;
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

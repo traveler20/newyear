@@ -1,0 +1,22 @@
+/* p-feature
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-feature {
+	&__description {
+		width: 75%;
+		margin: 0;
+		p + p {
+			margin: 20px 0 0;
+		}
+	}
+
+	@include s.breakpoint(tablet) {
+		&__description {
+			width: 50%;
+			margin: 0 0 0 24px;
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}

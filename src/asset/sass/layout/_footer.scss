@@ -1,0 +1,21 @@
+/* l-footer
+--------------------------- */
+@use "./../foundation/system" as s;
+
+.l-footer {
+	text-align: center;
+
+	&__inner {
+		background: s.$c-body;
+		padding: 30px;
+	}
+	&__copy {
+		color: s.$c-base-sub;
+		font-size: 12px;
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

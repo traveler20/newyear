@@ -1,0 +1,57 @@
+/* c-section
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-section {
+	background-color: s.$c-base;
+	padding: 120px 0;
+	&:nth-of-type(even) {
+		background-color: s.$c-base-sub;
+
+		.c-section__header {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__inner {
+		max-width: 1220px;
+		padding: 10px 20px;
+		margin: 0 auto;
+	}
+	&__header {
+		max-width: 1000px;
+		// max-height: 440px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 8px;
+	}
+	&__title {
+		color: s.$c-accent;
+		text-align: left;
+		font-size: 2.4rem;
+		font-weight: 700;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		letter-spacing: 3px;
+		margin: 0 0;
+		@include s.yujimai(bold);
+	}
+	&__lead {
+		display: table;
+		margin: 0 0;
+		text-align: left;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		letter-spacing: 3px;
+	}
+
+	@include s.breakpoint(tablet) {
+		&__header {
+			justify-content: center;
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}

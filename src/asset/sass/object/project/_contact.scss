@@ -1,0 +1,19 @@
+/* p-contact
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-contact {
+	padding-bottom: 0;
+
+	// c-button
+	.c-buttonBlock {
+		margin: 100px 0 0;
+		background-color: s.$c-base;
+		padding: 80px 0;
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}
